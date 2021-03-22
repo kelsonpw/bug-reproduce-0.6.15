@@ -20,6 +20,7 @@
 		B940ABF9F0EF4D9E7BEE66E7 /* libPods-BugReproduceTwo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFBB47B789FB423A0836CDA /* libPods-BugReproduceTwo.a */; };
 		BCD7D026EA0F0D26A112CE64 /* libPods-BugReproduceTwo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AE1AC872FC60FEA0021058 /* libPods-BugReproduceTwo-tvOSTests.a */; };
 		E8F998C7128D7C28D3C10C2B /* libPods-BugReproduceTwoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 218A9E512ECD79FDC21E8EBF /* libPods-BugReproduceTwoTests.a */; };
+		F8A38D0626088B7F00A131FF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A38D0526088B7F00A131FF /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		E97471FFD4BD08A6B59BA290 /* Pods-BugReproduceTwo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugReproduceTwo-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BugReproduceTwo-tvOSTests/Pods-BugReproduceTwo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F8A38D0426088B7E00A131FF /* BugReproduceTwo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BugReproduceTwo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8A38D0526088B7F00A131FF /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				F8A38D0526088B7F00A131FF /* File.swift */,
+				F8A38D0426088B7E00A131FF /* BugReproduceTwo-Bridging-Header.h */,
 			);
 			name = BugReproduceTwo;
 			sourceTree = "<group>";
@@ -194,7 +199,6 @@
 				18085402272D2551AE2A8271 /* Pods-BugReproduceTwoTests.debug.xcconfig */,
 				7301B996634BCD2F70B3F91F /* Pods-BugReproduceTwoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -293,6 +297,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1240;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -309,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -548,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				F8A38D0626088B7F00A131FF /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18085402272D2551AE2A8271 /* Pods-BugReproduceTwoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -624,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7301B996634BCD2F70B3F91F /* Pods-BugReproduceTwoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = BugReproduceTwoTests/Info.plist;
@@ -645,6 +656,7 @@
 			baseConfigurationReference = C93A9A01A2DE4FC043E75B49 /* Pods-BugReproduceTwo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = BugReproduceTwo/Info.plist;
@@ -656,6 +668,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BugReproduceTwo;
+				SWIFT_OBJC_BRIDGING_HEADER = "BugReproduceTwo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -665,6 +680,7 @@
 			baseConfigurationReference = 0241A58C42018B994173605E /* Pods-BugReproduceTwo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = BugReproduceTwo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,6 +691,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BugReproduceTwo;
+				SWIFT_OBJC_BRIDGING_HEADER = "BugReproduceTwo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
